@@ -1,4 +1,2 @@
-*.lock
-*.tgz
 .vscode
 .idea

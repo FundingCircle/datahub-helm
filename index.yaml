@@ -1,0 +1,49 @@
+apiVersion: v1
+entries:
+  datahub-prerequisites:
+  - apiVersion: v2
+    created: "2023-08-16T14:35:54.130785+01:00"
+    dependencies:
+    - condition: elasticsearch.enabled
+      name: elasticsearch
+      repository: https://helm.elastic.co
+      version: 7.17.3
+    - condition: neo4j.enabled
+      name: neo4j
+      repository: https://neo4j-contrib.github.io/neo4j-helm/
+      version: 4.2.2-1
+    - condition: neo4j-community.enabled
+      name: neo4j-community
+      repository: https://equinor.github.io/helm-charts/charts/
+      version: 1.2.5
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 9.1.8
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 11.2.6
+    - condition: gcloud-sqlproxy.enabled
+      name: gcloud-sqlproxy
+      repository: https://charts.rimusz.net
+      version: 0.24.1
+    - condition: cp-helm-charts.enabled
+      name: cp-helm-charts
+      repository: https://confluentinc.github.io/cp-helm-charts/
+      version: 0.6.0
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 22.1.6
+    description: A Helm chart for packages that Datahub depends on
+    digest: a35a1f262e71c92b3ebadb8f9065b936eea661772c28a7a7545a37446c9e4881
+    maintainers:
+    - email: datahub@acryl.io
+      name: DataHub
+    name: datahub-prerequisites
+    type: application
+    urls:
+    - releases/datahub-prerequisites-0.0.19.tgz
+    version: 0.0.19
+generated: "2023-08-16T14:35:54.106434+01:00"
